@@ -9,24 +9,7 @@
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <div class="nav__inner">
-      <a href="./index.html" class="nav__logo">
-        <span class="nav__logo-name">Grace &amp; Truth Chapel</span>
-        <span class="nav__logo-tagline">Where Grace Meets Truth</span>
-      </a>
-      <button class="nav__hamburger" aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__links">
-        <li><a href="./index.html"                           >Home</a></li>
-        <li><a href="./about.html"                 >About</a></li>
-        <li><a href="./what-to-expect.html" class="active">What to Expect</a></li>
-        <li><a href="./contact.html" class="nav__cta">Contact Us</a></li>
-      </ul>
-    </div>
-  </nav>
+  <nav-bar></nav-bar>
 
   <!-- PAGE HERO -->
   <section class="page-hero">
@@ -45,30 +28,24 @@
         <h2>Service Schedule</h2>
         <p>We gather every week to worship, study, and pray together. All are welcome at any of our meetings.</p>
       </div>
+      <div class="service-card">
+        <div class="service-card__icon">💻</div>
+        <h3>Wednesday Prayer & Bible Study</h3>
+        <span class="time">7:00 PM</span>
+        <p>Midweek prayer and Bible study. We dig deeper into Scripture together.</p>
+      </div>
       <div class="service-cards">
-        <div class="service-card">
-          <div class="service-card__icon">☀️</div>
-          <h3>Sunday Morning Worship</h3>
-          <span class="time">8:30 AM</span>
-          <p>Our main worship gathering. The congregation comes together to praise God through hymns, prayer, Scripture readings, and the Lord's Supper.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon">📖</div>
-          <h3>Sunday School / Bible Study</h3>
-          <span class="time">10:00 AM</span>
-          <p>An in-depth time of studying the Word together. Open to all ages and all levels of biblical familiarity.</p>
-        </div>
         <div class="service-card">
           <div class="service-card__icon">🙏</div>
           <h3>Ministry Meeting</h3>
-          <span class="time">11:00 AM</span>
+          <span class="time">9:30 AM</span>
           <p>A time for ministry, teaching, and mutual edification led by the Holy Spirit through the members of the body.</p>
         </div>
         <div class="service-card">
-          <div class="service-card__icon">💻</div>
-          <h3>Wednesday Prayer Meeting</h3>
-          <span class="time">7:00 PM</span>
-          <p>A midweek gathering for prayer, held online via Zoom. A simple and accessible way to stay connected throughout the week.</p>
+          <div class="service-card__icon">☀️</div>
+          <h3>Sunday Morning Worship</h3>
+          <span class="time">11:00 AM</span>
+          <p>Our main worship gathering. The congregation comes together to praise God through hymns, prayer, Scripture readings, and the Lord's Supper.</p>
         </div>
       </div>
     </div>
@@ -129,44 +106,7 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <p class="footer__brand-name">Grace &amp; Truth Chapel</p>
-          <p class="footer__brand-desc">A community of faith rooted in the grace and truth of Jesus Christ. All are welcome at the table.</p>
-        </div>
-        <div>
-          <p class="footer__heading">Quick Links</p>
-          <ul class="footer__links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./what-to-expect.html">What to Expect</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="footer__heading">Contact</p>
-          <div class="footer__contact-item">
-            <span class="footer__contact-icon">📍</span>
-            <span>123 Chapel Road, Your Town, TX 00000</span>
-          </div>
-          <div class="footer__contact-item">
-            <span class="footer__contact-icon">📞</span>
-            <span>(555) 000-0000</span>
-          </div>
-          <div class="footer__contact-item">
-            <span class="footer__contact-icon">✉️</span>
-            <span>info@graceandtruthchapel.org</span>
-          </div>
-        </div>
-      </div>
-      <hr class="footer__divider" />
-      <div class="footer__bottom">
-        <span>&copy; 2026 Grace and Truth Chapel. All rights reserved.</span>
-        <span>Built with love for the community.</span>
-      </div>
-    </div>
-  </footer>
+  <site-footer></site-footer>
 
   <script type="module" src="/src/main.ts"></script>
 </body>

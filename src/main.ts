@@ -1,21 +1,7 @@
 import './style.css'
+import './components/nav-bar'
+import './components/site-footer'
 import { validateEmail, validateRequired, filterEvents, type EventItem } from './utils'
-
-// ── Mobile navigation ──────────────────────────────────────────────────────
-const hamburger = document.querySelector<HTMLButtonElement>('.nav__hamburger')
-const navLinks = document.querySelector<HTMLElement>('.nav__links')
-
-hamburger?.addEventListener('click', () => {
-  hamburger.classList.toggle('open')
-  navLinks?.classList.toggle('open')
-})
-
-navLinks?.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger?.classList.remove('open')
-    navLinks.classList.remove('open')
-  })
-})
 
 // ── Contact form ───────────────────────────────────────────────────────────
 const form = document.querySelector<HTMLFormElement>('#contact-form')
