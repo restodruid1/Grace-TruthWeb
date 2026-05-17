@@ -8,11 +8,12 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'about.html'),
-        events: resolve(__dirname, 'events.html'),
-        staff: resolve(__dirname, 'staff.html'),
-        contact: resolve(__dirname, 'contact.html'),
+        main:         resolve(__dirname, 'index.html'),
+        about:        resolve(__dirname, 'about.html'),
+        whatToExpect: resolve(__dirname, 'what-to-expect.html'),
+        events:       resolve(__dirname, 'events.html'),
+        staff:        resolve(__dirname, 'staff.html'),
+        contact:      resolve(__dirname, 'contact.html'),
       },
     },
   },
