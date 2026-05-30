@@ -1,0 +1,641 @@
+/* ============================================================
+   GRACE & TRUTH CHAPEL — CLASSIC EDITION
+   Traditional styling: parchment tones, serif text, no frills
+   ============================================================ */
+
+/* ---- Reset & Base ---------------------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  line-height: 1.7;
+  background-color: #f5f0e6;
+  color: #2c1e0f;
+}
+
+a {
+  color: #5a1a1a;
+  text-decoration: underline;
+}
+a:hover {
+  color: #8b2e2e;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.3;
+  color: #2c1e0f;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.1em; }
+h2 { font-size: 1.6em; }
+h3 { font-size: 1.25em; }
+h4 { font-size: 1.05em; }
+
+blockquote {
+  border-left: 4px solid #9b7a3a;
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #4a3520;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #c8b99a;
+  margin: 24px 0;
+}
+
+/* ---- Layout ---------------------------------------------- */
+.page-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- Site Header ----------------------------------------- */
+.site-header {
+  background-color: #2c1e0f;
+  color: #f5f0e6;
+  text-align: center;
+  padding: 28px 20px 20px;
+  border-bottom: 4px solid #9b7a3a;
+}
+
+.site-header__name {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #f5e8cc;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.site-header__tagline {
+  font-size: 0.88em;
+  color: #c8b99a;
+  font-style: italic;
+  letter-spacing: 0.08em;
+}
+
+.site-header__verse {
+  margin-top: 10px;
+  font-size: 0.82em;
+  color: #b0a080;
+  font-style: italic;
+}
+
+/* ---- Navigation ------------------------------------------ */
+.site-nav {
+  background-color: #3e2a14;
+  border-bottom: 2px solid #9b7a3a;
+}
+
+.site-nav__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav li {
+  border-right: 1px solid #5a3e20;
+}
+.site-nav li:first-child {
+  border-left: 1px solid #5a3e20;
+}
+
+.site-nav a {
+  display: block;
+  padding: 10px 20px;
+  color: #e8d8b8;
+  text-decoration: none;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+}
+.site-nav a:hover,
+.site-nav a.active {
+  background-color: #9b7a3a;
+  color: #fff8ec;
+  text-decoration: none;
+}
+
+/* ---- Page Banner (inner pages) --------------------------- */
+.page-banner {
+  background-color: #3e2a14;
+  border-bottom: 3px solid #9b7a3a;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.page-banner h1 {
+  color: #f5e8cc;
+  font-size: 1.9em;
+  margin-bottom: 6px;
+}
+
+.page-banner p {
+  color: #c8b99a;
+  font-style: italic;
+  font-size: 0.95em;
+  margin-bottom: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- Section label (eyebrow text) ------------------------ */
+.section-label {
+  display: inline-block;
+  font-size: 0.72em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #7a5c28;
+  border-bottom: 1px solid #9b7a3a;
+  padding-bottom: 2px;
+  margin-bottom: 8px;
+}
+
+/* ---- Sections -------------------------------------------- */
+.section {
+  padding: 40px 0;
+}
+
+.section--shaded {
+  background-color: #ede6d6;
+  border-top: 1px solid #c8b99a;
+  border-bottom: 1px solid #c8b99a;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  font-size: 1.6em;
+  color: #2c1e0f;
+}
+
+.section-heading p {
+  color: #5a4530;
+  font-style: italic;
+  font-size: 0.95em;
+  margin-bottom: 0;
+}
+
+/* ---- Hero (home page) ------------------------------------ */
+.hero {
+  background-color: #3e2a14;
+  border-bottom: 4px solid #9b7a3a;
+  padding: 52px 20px 44px;
+  text-align: center;
+}
+
+.hero__eyebrow {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #c8b99a;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  color: #f5e8cc;
+  font-size: 2.4em;
+  margin-bottom: 14px;
+}
+
+.hero p {
+  color: #d8c9a8;
+  font-size: 1.1em;
+  font-style: italic;
+  max-width: 540px;
+  margin: 0 auto 28px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* ---- Buttons --------------------------------------------- */
+.btn {
+  display: inline-block;
+  padding: 9px 24px;
+  font-family: Georgia, serif;
+  font-size: 0.9em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid #9b7a3a;
+}
+
+.btn-primary {
+  background-color: #9b7a3a;
+  color: #fff8ec;
+  border-color: #9b7a3a;
+}
+.btn-primary:hover {
+  background-color: #7a5c28;
+  border-color: #7a5c28;
+  color: #fff8ec;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #f5e8cc;
+  border-color: #c8b99a;
+}
+.btn-secondary:hover {
+  background-color: rgba(255,255,255,0.1);
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #5a1a1a;
+  border-color: #5a1a1a;
+}
+.btn-outline:hover {
+  background-color: #5a1a1a;
+  color: #fff8ec;
+  text-decoration: none;
+}
+
+/* ---- Service Times box ----------------------------------- */
+.service-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background-color: #faf6ec;
+}
+
+.service-table th,
+.service-table td {
+  border: 1px solid #c8b99a;
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.service-table th {
+  background-color: #3e2a14;
+  color: #f5e8cc;
+  font-size: 0.82em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.service-table td:first-child {
+  font-weight: bold;
+  color: #3e2a14;
+  width: 34%;
+}
+
+.service-table .time-cell {
+  color: #7a5c28;
+  font-weight: bold;
+  font-size: 1.05em;
+  white-space: nowrap;
+}
+
+/* ---- Scripture verse box --------------------------------- */
+.verse-box {
+  background-color: #3e2a14;
+  border: 1px solid #9b7a3a;
+  padding: 28px 32px;
+  text-align: center;
+  margin: 0;
+}
+
+.verse-box p {
+  font-size: 1.15em;
+  font-style: italic;
+  color: #f5e8cc;
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+.verse-box .verse-ref {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.85em;
+  color: #c8b99a;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* ---- Two-column grid ------------------------------------- */
+.two-col {
+  display: table;
+  width: 100%;
+  border-spacing: 0;
+}
+
+.two-col__left,
+.two-col__right {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.two-col__left  { width: 44%; padding-right: 32px; }
+.two-col__right { width: 56%; }
+
+/* ---- Info list (address, phone, etc.) -------------------- */
+.info-list {
+  list-style: none;
+  margin: 16px 0;
+  padding: 0;
+}
+
+.info-list li {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+  padding-bottom: 14px;
+  border-bottom: 1px dotted #c8b99a;
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+}
+
+.info-list__label {
+  font-size: 0.72em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7a5c28;
+  min-width: 60px;
+  padding-top: 2px;
+}
+
+.info-list__value {
+  color: #2c1e0f;
+  font-size: 0.92em;
+}
+
+/* ---- Map embed ------------------------------------------- */
+.map-wrap {
+  border: 2px solid #c8b99a;
+  background: #ede6d6;
+  height: 320px;
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ---- Beliefs grid ---------------------------------------- */
+.beliefs-list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.beliefs-list td {
+  border: 1px solid #c8b99a;
+  padding: 16px 18px;
+  vertical-align: top;
+  width: 33.33%;
+  background-color: #faf6ec;
+}
+
+.beliefs-list td h3 {
+  font-size: 1em;
+  color: #3e2a14;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #c8b99a;
+  padding-bottom: 4px;
+}
+
+.beliefs-list td p {
+  font-size: 0.88em;
+  color: #4a3520;
+  margin-bottom: 0;
+}
+
+/* ---- Content box (shaded) -------------------------------- */
+.content-box {
+  background-color: #faf6ec;
+  border: 1px solid #c8b99a;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+
+.content-box h3 {
+  color: #3e2a14;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  border-bottom: 1px solid #c8b99a;
+  padding-bottom: 6px;
+}
+
+/* ---- Contact form ---------------------------------------- */
+.contact-form-wrap {
+  background-color: #faf6ec;
+  border: 1px solid #c8b99a;
+  padding: 28px 32px;
+}
+
+.contact-form-wrap h3 {
+  font-size: 1.2em;
+  color: #2c1e0f;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #c8b99a;
+  padding-bottom: 8px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.86em;
+  font-weight: bold;
+  color: #3e2a14;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #b0a080;
+  background-color: #fffdf7;
+  font-family: Georgia, serif;
+  font-size: 0.9em;
+  color: #2c1e0f;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #7a5c28;
+}
+
+.form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-row {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 0;
+}
+
+.form-row .form-group {
+  display: table-cell;
+  vertical-align: top;
+}
+.form-row .form-group:first-child {
+  padding-right: 12px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 11px;
+  font-size: 0.95em;
+  margin-top: 4px;
+}
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 32px 20px;
+  background-color: #f0ebe0;
+  border: 1px solid #c8b99a;
+}
+.form-success.show { display: block; }
+.form-success h3 { margin-bottom: 8px; }
+.form-success p  { margin-bottom: 0; font-style: italic; }
+
+/* ---- Footer ---------------------------------------------- */
+.site-footer {
+  background-color: #2c1e0f;
+  color: #a09070;
+  border-top: 4px solid #9b7a3a;
+  padding: 36px 20px 20px;
+  margin-top: 0;
+}
+
+.footer-grid {
+  display: table;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto 24px;
+}
+
+.footer-col {
+  display: table-cell;
+  vertical-align: top;
+  padding-right: 32px;
+}
+.footer-col:last-child { padding-right: 0; }
+
+.footer-col h4 {
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #c8b99a;
+  border-bottom: 1px solid #4a3520;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+.footer-col p,
+.footer-col a {
+  color: #9a8060;
+  font-size: 0.88em;
+  line-height: 1.75;
+  text-decoration: none;
+}
+.footer-col a:hover {
+  color: #c8b99a;
+  text-decoration: underline;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 6px;
+}
+
+.footer-bottom {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 16px;
+  border-top: 1px solid #3e2a14;
+  text-align: center;
+  font-size: 0.8em;
+  color: #7a6840;
+}
+
+/* ---- Responsive ------------------------------------------ */
+@media (max-width: 700px) {
+  .two-col,
+  .two-col__left,
+  .two-col__right {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+  }
+  .two-col__left { margin-bottom: 24px; }
+
+  .beliefs-list td { display: block; width: 100%; }
+
+  .footer-grid,
+  .footer-col { display: block; width: 100%; padding-right: 0; margin-bottom: 20px; }
+
+  .form-row,
+  .form-row .form-group { display: block; width: 100%; padding-right: 0; }
+
+  .hero h1 { font-size: 1.7em; }
+  .site-header__name { font-size: 1.6em; }
+  .site-nav a { padding: 10px 12px; font-size: 0.82em; }
+}

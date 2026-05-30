@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Grace and Truth Chapel. We'd love to hear from you." />
+  <title>Contact Us | Grace and Truth Chapel</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header__name">Grace &amp; Truth Chapel</div>
+    <div class="site-header__tagline">San Diego, California</div>
+    <div class="site-header__verse">&ldquo;Where two or three are gathered together in my name, there am I in the midst of them.&rdquo; &mdash; Matthew 18:20</div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="site-nav">
+    <div class="site-nav__inner">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./what-to-expect.html">What to Expect</a></li>
+        <li><a href="./contact.html" class="active">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <h1>Contact Us</h1>
+    <p>We&rsquo;d love to hear from you. Send us a message and we&rsquo;ll get back to you shortly.</p>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="page-wrap">
+      <div class="two-col">
+
+        <!-- Info Column -->
+        <div class="two-col__left">
+          <span class="section-label">Reach Out</span>
+          <h2>We&rsquo;re Here for You</h2>
+          <hr />
+          <p>
+            Whether you have a question about our services, want to plan a visit, need prayer, or are interested
+            in getting involved, we want to hear from you. No question is too small.
+          </p>
+
+          <ul class="info-list">
+            <li>
+              <span class="info-list__label">Address</span>
+              <span class="info-list__value">4677 Ohio St<br />San Diego, CA 92116</span>
+            </li>
+            <li>
+              <span class="info-list__label">Phone</span>
+              <span class="info-list__value">(555) 000-0000</span>
+            </li>
+            <li>
+              <span class="info-list__label">Email</span>
+              <span class="info-list__value">info@graceandtruthchapel.org</span>
+            </li>
+          </ul>
+
+          <div class="content-box">
+            <h3>Service Times</h3>
+            <p><strong>Sunday Mornings:</strong> 9:30 AM &amp; 11:00 AM</p>
+            <p style="margin-bottom:0;"><strong>Wednesday Evening:</strong> 7:00 PM</p>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="two-col__right">
+          <div class="contact-form-wrap">
+            <h3>Send Us a Message</h3>
+
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name <span style="color:#8b2e2e">*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address <span style="color:#8b2e2e">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                  <option value="" disabled selected>Select a topic&hellip;</option>
+                  <option value="visit">Planning a Visit</option>
+                  <option value="prayer">Prayer Request</option>
+                  <option value="volunteer">Volunteering</option>
+                  <option value="events">Events &amp; Programs</option>
+                  <option value="pastoral">Pastoral Care</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message <span style="color:#8b2e2e">*</span></label>
+                <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+            </form>
+
+            <!-- Success State -->
+            <div class="form-success" id="form-success">
+              <h3>Message Received!</h3>
+              <p>Thank you for reaching out. Someone from our team will be in touch with you within 1&ndash;2 business days.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Grace &amp; Truth Chapel</h4>
+        <p>A community of faith rooted in the grace and truth of Jesus Christ. All are welcome at the table.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./what-to-expect.html">What to Expect</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>
+          4677 Ohio St<br />
+          San Diego, CA 92116<br />
+          (555) 000-0000<br />
+          info@graceandtruthchapel.org
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Grace and Truth Chapel. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Simple form submit handler
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var message = document.getElementById('message').value.trim();
+      if (!name || !email || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+      this.style.display = 'none';
+      document.getElementById('form-success').classList.add('show');
+    });
+  </script>
+
+</body>
+</html>

@@ -24,6 +24,8 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - run: cp -r grace-truth-classic dist/grace-truth-classic
+      - run: cp -r grace-truth-warm dist/grace-truth-warm
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
