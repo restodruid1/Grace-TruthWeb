@@ -23,13 +23,10 @@ class SiteFooter extends HTMLElement {
                 <span class="footer__contact-icon">📍</span>
                 <span>4677 Ohio St, San Diego, CA 92116</span>
               </div>
-              <div class="footer__contact-item">
-                <span class="footer__contact-icon">📞</span>
-                <span>(555) 000-0000</span>
-              </div>
+
               <div class="footer__contact-item">
                 <span class="footer__contact-icon">✉️</span>
-                <span>info@graceandtruthchapel.org</span>
+                <span>graceandtruthchapelsandiego@gmail.com</span>
               </div>
             </div>
           </div>

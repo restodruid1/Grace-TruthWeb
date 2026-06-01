@@ -13,7 +13,7 @@
   <header class="site-header">
     <div class="site-header__name">Grace &amp; Truth Chapel</div>
     <div class="site-header__tagline">San Diego, California</div>
-    <div class="site-header__verse">&ldquo;Where two or three are gathered together in my name, there am I in the midst of them.&rdquo; &mdash; Matthew 18:20</div>
+    <div class="site-header__verse">&ldquo;For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.&rdquo; &mdash; John 3:16</div>
   </header>
 
   <!-- NAVIGATION -->
@@ -54,13 +54,10 @@
               <span class="info-list__label">Address</span>
               <span class="info-list__value">4677 Ohio St<br />San Diego, CA 92116</span>
             </li>
-            <li>
-              <span class="info-list__label">Phone</span>
-              <span class="info-list__value">(555) 000-0000</span>
-            </li>
+
             <li>
               <span class="info-list__label">Email</span>
-              <span class="info-list__value">info@graceandtruthchapel.org</span>
+              <span class="info-list__value">graceandtruthchapelsandiego@gmail.com</span>
             </li>
           </ul>
 
@@ -71,48 +68,20 @@
           </div>
         </div>
 
-        <!-- Form Column -->
+        <!-- Email Card Column -->
         <div class="two-col__right">
-          <div class="contact-form-wrap">
-            <h3>Send Us a Message</h3>
-
-            <form id="contact-form" novalidate>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Full Name <span style="color:#8b2e2e">*</span></label>
-                  <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required />
-                </div>
-                <div class="form-group">
-                  <label for="email">Email Address <span style="color:#8b2e2e">*</span></label>
-                  <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" required />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <select id="subject" name="subject">
-                  <option value="" disabled selected>Select a topic&hellip;</option>
-                  <option value="visit">Planning a Visit</option>
-                  <option value="prayer">Prayer Request</option>
-                  <option value="volunteer">Volunteering</option>
-                  <option value="events">Events &amp; Programs</option>
-                  <option value="pastoral">Pastoral Care</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Message <span style="color:#8b2e2e">*</span></label>
-                <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary form-submit">Send Message</button>
-            </form>
-
-            <!-- Success State -->
-            <div class="form-success" id="form-success">
-              <h3>Message Received!</h3>
-              <p>Thank you for reaching out. Someone from our team will be in touch with you within 1&ndash;2 business days.</p>
+          <div class="contact-form-wrap contact-email-card">
+            <div class="contact__email-icon-wrap">✉️</div>
+            <h3>Send Us an Email</h3>
+            <p>We read every message and do our best to respond promptly. Whether it&rsquo;s a question, a prayer request, or just saying hello, we&rsquo;d love to hear from you.</p>
+            <a href="mailto:graceandtruthchapelsandiego@gmail.com" class="btn btn-primary contact__email-btn">Open in Email App</a>
+            <p class="contact__email-addr">graceandtruthchapelsandiego@gmail.com</p>
+            <div class="contact__topics">
+              <span class="contact__topic">Planning a Visit</span>
+              <span class="contact__topic">Prayer Request</span>
+              <span class="contact__topic">General Questions</span>
+              <span class="contact__topic">Pastoral Care</span>
+              <span class="contact__topic">Getting Involved</span>
             </div>
           </div>
         </div>
@@ -142,8 +111,7 @@
         <p>
           4677 Ohio St<br />
           San Diego, CA 92116<br />
-          (555) 000-0000<br />
-          info@graceandtruthchapel.org
+          graceandtruthchapelsandiego@gmail.com
         </p>
       </div>
     </div>
@@ -152,21 +120,6 @@
     </div>
   </footer>
 
-  <script>
-    // Simple form submit handler
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var name = document.getElementById('name').value.trim();
-      var email = document.getElementById('email').value.trim();
-      var message = document.getElementById('message').value.trim();
-      if (!name || !email || !message) {
-        alert('Please fill in all required fields.');
-        return;
-      }
-      this.style.display = 'none';
-      document.getElementById('form-success').classList.add('show');
-    });
-  </script>
 
 </body>
 </html>

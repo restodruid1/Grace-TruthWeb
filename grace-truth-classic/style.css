@@ -473,80 +473,44 @@ hr {
   padding: 28px 32px;
 }
 
-.contact-form-wrap h3 {
+.contact-email-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact__email-icon-wrap {
+  font-size: 1.8rem;
+  width: 72px; height: 72px;
+  background: #f5edcc;
+  border: 1px solid #c8b99a;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+
+.contact-email-card h3 {
   font-size: 1.2em;
   color: #2c1e0f;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   border-bottom: 1px solid #c8b99a;
   padding-bottom: 8px;
+  width: 100%;
 }
 
-.form-group {
-  margin-bottom: 16px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.86em;
-  font-weight: bold;
+.contact-email-card > p { max-width: 36ch; margin-bottom: 24px; line-height: 1.7; }
+.contact__email-btn { width: 100%; justify-content: center; margin-bottom: 12px; }
+.contact__email-addr { font-size: 0.82em; color: #6a5a40; margin-bottom: 24px; }
+.contact__topics { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.contact__topic {
+  background: #f5edcc;
   color: #3e2a14;
-  margin-bottom: 4px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 7px 10px;
-  border: 1px solid #b0a080;
-  background-color: #fffdf7;
-  font-family: Georgia, serif;
-  font-size: 0.9em;
-  color: #2c1e0f;
-  outline: none;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: #7a5c28;
-}
-
-.form-group textarea {
-  min-height: 110px;
-  resize: vertical;
-}
-
-.form-row {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-  border-spacing: 0;
-}
-
-.form-row .form-group {
-  display: table-cell;
-  vertical-align: top;
-}
-.form-row .form-group:first-child {
-  padding-right: 12px;
-}
-
-.form-submit {
-  width: 100%;
-  padding: 11px;
-  font-size: 0.95em;
-  margin-top: 4px;
-}
-
-.form-success {
-  display: none;
-  text-align: center;
-  padding: 32px 20px;
-  background-color: #f0ebe0;
+  font-size: 0.75em; font-weight: bold;
+  padding: 4px 12px;
   border: 1px solid #c8b99a;
+  letter-spacing: 0.04em;
 }
-.form-success.show { display: block; }
 .form-success h3 { margin-bottom: 8px; }
 .form-success p  { margin-bottom: 0; font-style: italic; }
 
@@ -638,4 +602,36 @@ hr {
   .hero h1 { font-size: 1.7em; }
   .site-header__name { font-size: 1.6em; }
   .site-nav a { padding: 10px 12px; font-size: 0.82em; }
+
+  /* Service table: stack rows as cards */
+  .service-table thead { display: none; }
+  .service-table,
+  .service-table tbody,
+  .service-table tr,
+  .service-table td { display: block; width: 100%; box-sizing: border-box; }
+  .service-table tr {
+    border: 1px solid #c8b99a;
+    margin-bottom: 12px;
+    background-color: #faf6ec;
+  }
+  .service-table td {
+    border: none;
+    border-bottom: 1px solid #e8dcc8;
+    padding: 10px 14px;
+    width: 100%;
+  }
+  .service-table td:last-child { border-bottom: none; }
+  .service-table td::before {
+    display: block;
+    font-size: 0.72em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #7a5c28;
+    margin-bottom: 3px;
+  }
+  .service-table td:nth-child(1)::before { content: "Meeting"; }
+  .service-table td:nth-child(2)::before { content: "Day \0026  Time"; }
+  .service-table td:nth-child(3)::before { content: "Description"; }
+  .service-table td.time-cell { white-space: normal; }
 }
